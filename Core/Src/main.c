@@ -191,7 +191,7 @@ int main(void)
 
   memset(&gas_sensor, 0, sizeof(gas_sensor));
 
-	gas_sensor.dev_id = BME680_I2C_ADDR_PRIMARY | 1; //Se le agrega uno debido a que SDO queda conectado a VCC por medio de PULL-UP.
+	gas_sensor.dev_id = BME680_I2C_ADDR_SECONDARY; //Se considera la dirección 2 debido a que SDO queda conectado a VCC por medio de PULL-UP.
 	gas_sensor.intf = BME680_I2C_INTF;
 	gas_sensor.read = user_i2c_read;
 	gas_sensor.write = user_i2c_write;
